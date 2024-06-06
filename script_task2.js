@@ -125,7 +125,7 @@ const users = [
     }
 ]
 
-function skillsOfUsers(...users) {
+function skillsOfUsers(users) {
     const skills = new Set();
 
     users.forEach(user => {
@@ -136,9 +136,9 @@ function skillsOfUsers(...users) {
 
     return Array.from(skills);
 }
-console.log(skillsOfUsers(...users));
+console.log(skillsOfUsers(users));
 
-function totalBalance(...users) {
+function totalBalance(users) {
     const filteredUsers = users.filter(user => user.age < 30 && user.friends.length === 2);
 
     let result = 0;
@@ -148,4 +148,4 @@ function totalBalance(...users) {
 
     return result;
 }
-console.log(totalBalance(...users));
+console.log(totalBalance(users));
